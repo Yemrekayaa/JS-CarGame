@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@500&display=swap');
+
 .game-area{
-    top: 0;
-    left: 0;
     background-color: green;
-    position: absolute;
     width: 500px;
     height: 730px;;
-
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top:0;
+    left: 0;
+    right: 0;
+    text-align: center;
 
 }
 
@@ -27,34 +32,59 @@
 
 .car{
     left:225px;
-    bottom: 25px;
+    top: 500px;
     background-image: url("/assets/car.png");
-    background-size:contain;
+    background-size:cover;
     position: absolute;
-    width: 78px;
-    height: 166px;
+    width: 64px;
+    height: 148px;
     
 }
 
 .enemy-car{
     left:30px;
     top : -166px;
-    background-image: url("/assets/car.png");
+    background-image: url("/assets/enemy_car.png");
     background-size:cover;
     position: absolute;
-    width: 78px;
-    height: 166px;
+    width: 64px;
+    height: 148px;
 }
 
-/* .border-top{
+.pause{
     position: absolute;
-    background-color: black;
-    width: 500px;
-    height: 100px;
-    top: 0;
-    left: 0;
     z-index: +1;
-} */
+    display: none;
+    font-family: 'Saira', sans-serif;
+    font-size: 50px;
+    background-color: rgba(0, 0, 0,0.75);
+    color: white;
+    padding: 10px 40px 10px 40px;
+    border: rgba(255, 255, 255, 0.5) solid 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+}
+.score{
+    position: absolute;
+    z-index: +1;
+    left:0;
+    right:0;
+    margin: auto;
+    font-family: 'Saira', sans-serif;
+    color: white;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0,0.75);
+    padding-top: 10px;
+
+}
+
+.press{
+    font-size: 20px;
+    margin-top: 0px;
+}
 
 
   @keyframes road-slide {
