@@ -1,2 +1,2 @@
 # Car Game
-![preview](preview.PNG)
+![preview](preview.gif)
