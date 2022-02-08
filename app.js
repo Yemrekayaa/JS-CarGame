@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('visibilitychange', function () {
         if (document.hidden) {
+            if (myCar.isStart == true)
             pause();
         } else {
             //resume();
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         score: 0,
         isPause: false,
         isGameOver: false,
+        isStart: false,
         leftTime: null,
         rightTime: null
     }
@@ -66,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 pause();
             }
         } else if (e.keyCode === 32 && !e.repeat && e.type == "keydown" && myCar.isGameOver == false) {
+            if(myCar.isStart == false) myCar.isStart = true;
             myCar.isPause = false;
             resume();
         } else if(e.keyCode === 32 && !e.repeat && e.type == "keydown" && myCar.isGameOver == true){
@@ -158,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(myCar.rightTime);
         clearInterval(myCar.leftTime);
         pauseElement.style.display = "block";
-        pauseElement.innerHTML = "START GAME" + "<p class='press'>(press spacebar to start)</p>";
+        pauseElement.innerHTML = "START GAME" + "<p class='press'>(press spacebar to start)</p><p class='press'>(play with a and d)</p>";
     }
 
     
