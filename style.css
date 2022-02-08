@@ -1,0 +1,68 @@
+.game-area{
+    top: 0;
+    left: 0;
+    background-color: green;
+    position: absolute;
+    width: 500px;
+    height: 730px;;
+
+
+}
+
+.road{
+    bottom: 0px;
+    left: 0;
+    position: absolute;
+    background-image: url("/assets/road.jpg");
+    background-position: 0px 0px;
+    background-repeat: repeat-y;
+    background-size: contain;
+    animation: road-slide 5000s linear infinite;
+    width: 500px;
+    height: 630px;;
+
+}
+
+
+
+.car{
+    left:225px;
+    bottom: 25px;
+    background-image: url("/assets/car.png");
+    background-size:contain;
+    position: absolute;
+    width: 78px;
+    height: 166px;
+    
+}
+
+.enemy-car{
+    left:30px;
+    bottom: 600px;
+    background-image: url("/assets/car.png");
+    background-size:contain;
+    position: absolute;
+    width: 78px;
+    height: 166px;
+}
+
+.border-top{
+    position: absolute;
+    background-color: black;
+    width: 500px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    z-index: +1;
+}
+
+
+  @keyframes road-slide {
+    from {
+      background-position: 0 0%;
+    }
+    to {
+      background-position: 0 1000000%;
+    }
+  }
+ 
