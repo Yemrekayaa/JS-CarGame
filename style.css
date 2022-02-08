@@ -19,7 +19,7 @@
     background-size: contain;
     animation: road-slide 5000s linear infinite;
     width: 500px;
-    height: 630px;;
+    height: 730px;;
 
 }
 
@@ -38,15 +38,15 @@
 
 .enemy-car{
     left:30px;
-    bottom: 600px;
+    top : -166px;
     background-image: url("/assets/car.png");
-    background-size:contain;
+    background-size:cover;
     position: absolute;
     width: 78px;
     height: 166px;
 }
 
-.border-top{
+/* .border-top{
     position: absolute;
     background-color: black;
     width: 500px;
@@ -54,7 +54,7 @@
     top: 0;
     left: 0;
     z-index: +1;
-}
+} */
 
 
   @keyframes road-slide {

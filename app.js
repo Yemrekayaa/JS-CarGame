@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let myCar = {
         width: 78,
         height: 166,
+        bottom: 25,
         left: 225,
         speed: 7,
         leftTime: null,
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let move = direction == "left" ? -1 : 1;
             myCar.left += move;
             car.style.left = myCar.left + "px";
-            //console.log(car.style.left);
+            //console.log(myCar.bottom);
         }
     }
 
@@ -47,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             width: 78,
             height: 166,
             left : 30,
-            bottom: 600,
+            top: -166,
             pos: [35,150,272,390],
             speed: 1
         }
@@ -59,12 +60,37 @@ document.addEventListener('DOMContentLoaded', () => {
         enemyCarElement.style.left = randomLeft + "px";
 
         function moveEnemyCar(){
-            enemyCar.bottom -= enemyCar.speed;
-            enemyCarElement.style.bottom = enemyCar.bottom  + "px";
+            
+            enemyCar.top += enemyCar.speed;
+            enemyCarElement.style.top = enemyCar.top  + "px";
+            
+            if(enemyCar.top >= 564){
+               
+                enemyCar.height -= enemyCar.speed;
+                enemyCarElement.style.height = enemyCar.height + "px";
+                if(enemyCar.height <= 0){
+                    road.removeChild(enemyCarElement);
+                    clearInterval(moveTimer)
+                }
+                
+            }
 
+            if(enemyCar.bottom == 191){
+                gameOver();
+            }
         }
         
-        setInterval(moveEnemyCar,10);
+        
+
+
+        let moveTimer = setInterval(moveEnemyCar,10);
+
+        
     }
+
+    function gameOver(){
+        console.log("bitti");
+    }
+
     setInterval(generateCar,4000);
 })
