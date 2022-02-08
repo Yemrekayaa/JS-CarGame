@@ -18,7 +18,7 @@
     bottom: 0px;
     left: 0;
     position: absolute;
-    background-image: url("/assets/road.jpg");
+    background-image: url("./assets/road.jpg");
     background-position: 0px 0px;
     background-repeat: repeat-y;
     background-size: contain;
@@ -33,7 +33,7 @@
 .car{
     left:225px;
     top: 500px;
-    background-image: url("/assets/car.png");
+    background-image: url("./assets/car.png");
     background-size:cover;
     position: absolute;
     width: 64px;
@@ -44,7 +44,7 @@
 .enemy-car{
     left:30px;
     top : -166px;
-    background-image: url("/assets/enemy_car.png");
+    background-image: url("./assets/enemy_car.png");
     background-size:cover;
     position: absolute;
     width: 64px;
